@@ -17,7 +17,7 @@ wb = Workbook()
 ws = wb.active
 ws.append(['t [°C]', 'date', 'time', 'id'])
 
-with serial.Serial('COM4', 9600, timeout=None) as ser:
+with serial.Serial('COM3', 9600, timeout=None) as ser:
     line = True
     while line:
         line = ser.readline().decode()
